@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+
+<body class="body">
+    <div class="menu">
+
+        <a class="login" href="#login" data-option="dataLogin" onclick="changeWindow(this)"><b>Log in</b></a>
+        <a class="signin" href="#register" data-option="dataRegister" onclick="changeWindow(this)"><b>Sign in</b></a>
+        <a class="about" href="#about" onclick="changeWindow(this)"><b>About</b></a>
+        <a class="setting" href="#setting" onclick="changeWindow(this)"><b>Settings</b></a>
+    
+    </div>
+
+
+    <div id="mainContainer" class="main" >
+        <section id="welcome" >
+            <img id="image" src="12.jpg">
+        </section>
+
+        <section id="dataLogin" style="background-color:blue; display: none;">
+            <img id="image" src="6.jpg">
+        </section>
+
+        <section id="dataRegister" style="background-color: aqua; display: none;">
+            <img id="image" src="2.jpg">
+        </section>
+
+        <section id="gameSection">
+
+        </section>
+
+        <section id="aboutSection">
+
+        </section>
+
+        <section id="settingSection">
+
+        </section>
+
+    </div>
+
+
+
+
+    <script type="text/javascript" src="menu.js"></script>
+
+</body>
+
+
+
+</html>
