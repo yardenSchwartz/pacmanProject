@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $( function() {
+      $( "#datepicker" ).datepicker({
+        showOn: "button",
+        buttonImage: "images/calendar.gif",
+        buttonImageOnly: true,
+        buttonText: "Select date"
+      });
+    } );
+    </script>
+
 </head>
 
 
 <body class="body">
     <div class="menu">
-
+        <a class="welcome" href="#welcome" data-option="datawelcome" onclick="changeWindow(this)"><b>Welcome</b></a>
         <a class="login" href="#login" data-option="dataLogin" onclick="changeWindow(this)"><b>Log in</b></a>
         <a class="signin" href="#register" data-option="dataRegister" onclick="changeWindow(this)"><b>Sign in</b></a>
         <a class="about" href="#about" onclick="changeWindow(this)"><b>About</b></a>
@@ -17,17 +35,50 @@
 
 
     <div id="mainContainer" class="main" >
-        <section id="welcome" >
-            <img id="image" src="12.jpg">
-        
+        <section id="datawelcome" >
+            <div class="welcomeContainer">
+                <img id="pacman_icon" style=" width: 70px; margin-top: -50px;" src ="images/pacman_icon.jpg">
+                <button type="button" calss="signup-btn">Sign up</button>
+                <hr>
+                <p class="or">OR</p>
+                <button type="button" calss="login-btn">Login</button>
+            </div>
         </section>
 
         <section id="dataLogin" style="background-color:blue; display: none;">
-            <img id="image" src="6.jpg">
+            <img id="image" src="images/6.jpg">
+        
+
         </section>
 
-        <section id="dataRegister" style="background-color: aqua; display: none;">
-            <img id="image" src="2.jpg">
+        <section id="dataRegister" style="display: none;">
+         
+            <div class="signinContainer">
+                <form>
+                    <br>
+                    <br>
+                <label for="uName"><b>User Name</b></label>
+                <input type="text" placeholder="Enter UserName" name="uName" required>
+                <br>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <br>
+                <label for="fName"><b>Full Name</b></label>
+                <input type="text" placeholder="Enter full name" name="fName" required>
+                <br>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+                <br>
+                <div class="container">
+                <p>BirthDate: <input type="text" id="datepicker"></p>
+            </div>
+            <br>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+            </form>
+
+            </div>
         </section>
 
         <section id="gameSection">
@@ -47,8 +98,8 @@
 
 
 
-    <script type="text/javascript" src="menu.js"></script>
-
+    <script type="text/javascript" src="jvCode/menu.js"></script>
+   
 </body>
 
 
