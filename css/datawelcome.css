@@ -1,6 +1,6 @@
 /*************welcom************/
 
-button{
+.signup-btn, .login-btn{
     color: #ffffff;
     background-color: cornflowerblue;
     width: 100%;
@@ -13,6 +13,11 @@ button{
     cursor: pointer;
     font-family: cursive;
   }
+
+  button:hover, button:active{
+    background: lightblue;
+  }
+
   
   .welcomeContainer{
     width: 300px;

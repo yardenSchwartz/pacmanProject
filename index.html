@@ -2,23 +2,22 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/dateRegister.css" />
+    <link rel="stylesheet" type="text/css" href="css/dataWelcome.css" />
+
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-    $( function() {
-      $( "#datepicker" ).datepicker({
-        showOn: "button",
-        buttonImage: "images/calendar.gif",
-        buttonImageOnly: true,
-        buttonText: "Select date"
-      });
-    } );
-    </script>
+    <link rel="stylesheet" type="text/css" href="css/ui-lightness/jqury-ui-1.8.14.custom.css">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+    <script type="text/javascript" src="jvCode/menuCode.js"></script>
+    <script type="text/javascript" src="jvCode/registerCode.js"></script>
+    <script type="text/javascript" src="jvCode/welcomCode.js"></script>
 
 </head>
 
@@ -38,10 +37,10 @@
         <section id="datawelcome" >
             <div class="welcomeContainer">
                 <img id="pacman_icon" style=" width: 70px; margin-top: -50px;" src ="images/pacman_icon.jpg">
-                <button type="button" calss="signup-btn">Sign up</button>
+                <button type="button" class="signup-btn">Sign up</button>
                 <hr>
                 <p class="or">OR</p>
-                <button type="button" calss="login-btn">Login</button>
+                <button type="button" class="login-btn">Login</button>
             </div>
         </section>
 
@@ -58,21 +57,22 @@
                     <br>
                     <br>
                 <label for="uName"><b>User Name</b></label>
-                <input type="text" placeholder="Enter UserName" name="uName" required>
+                <input type="text" class="input-box" placeholder="Enter UserName" name="uName" required>
                 <br>
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <input type="password" class="input-box" placeholder="Enter Password" name="psw" required>
                 <br>
                 <label for="fName"><b>Full Name</b></label>
-                <input type="text" placeholder="Enter full name" name="fName" required>
+                <input type="text" class="input-box" placeholder="Enter full name" name="fName" required>
                 <br>
                 <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
-                <br>
-                <div class="container">
-                <p>BirthDate: <input type="text" id="datepicker"></p>
-            </div>
+                <input type="text" class="input-box" placeholder="Enter Email" name="email" required>
+                <form>
+	                <label for="dt"><b>BirthDate</b></label>
+	                <input name="dt" class="input-box" style="text-align: center;" type="date"/>
+                </form>
             <br>
+            <button type="button" class="submit-btn">Submit</button>
                 <label>
                   <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
                 </label>
@@ -98,10 +98,7 @@
 
 
 
-    <script type="text/javascript" src="jvCode/menu.js"></script>
-   
 </body>
-
 
 
 </html>
