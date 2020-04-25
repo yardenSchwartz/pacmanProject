@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/dateRegister.css" />
     <link rel="stylesheet" type="text/css" href="css/dataWelcome.css" />
+    <link rel="stylesheet" type="text/css" href="css/setting.css" />
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,12 +14,17 @@
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
-     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   
     <script type="text/javascript" src="jvCode/menuCode.js"></script>
     <script type="text/javascript" src="jvCode/registerCode.js"></script>
     <script type="text/javascript" src="jvCode/welcomCode.js"></script>
+    <script type="text/javascript" src="jvCode/setting.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/f35a"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
 
 </head>
 
@@ -27,8 +34,8 @@
         <a class="welcome" href="#welcome" data-option="datawelcome" onclick="changeWindow(this)"><b>Welcome</b></a>
         <a class="login" href="#login" data-option="dataLogin" onclick="changeWindow(this)"><b>Log in</b></a>
         <a class="signin" href="#register" data-option="dataRegister" onclick="changeWindow(this)"><b>Sign in</b></a>
-        <a class="about" href="#about" onclick="changeWindow(this)"><b>About</b></a>
-        <a class="setting" href="#setting" onclick="changeWindow(this)"><b>Settings</b></a>
+        <a class="about" href="#about" data-option="aboutSection" onclick="changeWindow(this)"><b>About</b></a>
+        <a class="setting" href="#setting" data-option="settingSection" onclick="changeWindow(this)"><b>Settings</b></a>
     
     </div>
 
@@ -42,6 +49,7 @@
                 <p class="or">OR</p>
                 <button type="button" class="login-btn">Login</button>
             </div>
+
         </section>
 
         <section id="dataLogin" style="background-color:blue; display: none;">
@@ -89,15 +97,86 @@
 
         </section>
 
-        <section id="settingSection">
+        <section id="settingSection" style="display: none; background-image: url('images/pacBackground3.jpg');">
+                    
+            <div class="settingConteiner" >
+                <!-- <img style=" width: 200px; margin-top: -140px;" src ="images/packman4e.jpg"> -->
+                <p class="mainHeadline"  style="margin-top: 0px;" >Almost There...</p>
+                <form>
+                    <div class="subsection">
+                        <div>
+                    <p class="settingHeaders" style=" margin-top: -5px;">Choose your in-game keyboard:</p>
+                    <br>
+                </div>
+                    
+                <div class="keyboard">
+                    <ul>
+                    <li><a href="#" class="key c37" id="left" onclick="leftKeyHandling()"><span><</span> </a></li>
+                    <li><a href="#" class="key c38" id="up" onclick="upKeyHandling()"><span>^</span></a>
+                        <a href="#" class="key c40" id="down" onclick="downKeyHandling()"><span>v</span></a>
+                    </li>
+                    <li><a href="#" class="key c39" id="right" onclick="rightKeyHandling()"><span>></span></a></li>
+                    </ul>
+                </div>
+                <p id="keyerror" style="display: none;color:red;text-align: center;"></p>
+            </div>
+                <br>
+                <br>
+                <br>
+               
+                <br>
+                <br>                  
+                    <br>
+                    <br>
+                    <br>
+                    <div style="border-top: white solid 3px; margin-top: -2px;">
+                    <p class="settingHeaders" style="margin-top: 0px;">Just For Fun:</p>
+                   
+                    <label class="settingLabels" for="numberOfBalls" style="margin-bottom: 0px;"><b>Number Of Balls:</b></label>
+                    <input type="nob" class="input-box numberBig" id="numberOfBalls" placeholder="50-90" name="nob" required>
+                    <p class="errorSetting" id="ballsError"></p>
+                    <p style="font-family: Nunito; font-size: 20px; margin-top: -2px;border-bottom: seashell solid 3px; width:30%;margin-left: 35%;"><b>Pick A Color For Each Ball:</b></p>
+
+                   <div style="float:center"> 
+
+                   <label class="settingLabels" for="5point"><b>5 Point Ball:</b></label>
+                    <input class="settingLabels" type="color" class="color-picker" id="5PointColor" value="#b7ded2">
+                    
+                    <label class="settingLabels" for="15point"><b>15 Point Ball:</b></label>
+                    <input type="color" class="color-picker"  id="15PointColor" value="#f7c297">
+                    
+                    <label class="settingLabels" for="25point"><b>25 Point Ball:</b></label>
+                    <input type="color"  class="color-picker"  value="#f6a6b2">
+                </div>
+                    <br>
+                </div>
+                    <div>
+                        <label class="settingLabels" for="time"><b>Game Time:</b></label>
+                        <input type="time" name="time" id="choosenGameTime" value="01:00" />
+                        <p class="errorSetting" id="timeError"></p>
+
+                    </div>
+
+                    <label class="settingLabels" for="numberOfMonsters"><b>Number Of Monsters:</b></label>
+                    <input type="nob" class="input-box numberSmall" id="numberOfMonsters" placeholder="1-4" name="nob" required>
+                    <p class="errorSetting" id="monsterError"></p>
+
+                </form>
+            <br>
+            <button type="button" class="startGame-btn">START !</button>
+            <button type="button" class="startGame-btn">Random Values And Start</button>
+            
+            </form>
+
+            </div>
 
         </section>
 
     </div>
 
 
-
-
+<script src="jvCode/setting.js"></script>
+<script src="vendor/jquery/dist/jquery.min.js"></script>
 </body>
 
 
