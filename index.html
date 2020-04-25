@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/dateRegister.css" />
-    <link rel="stylesheet" type="text/css" href="css/dataWelcome.css" />
-
+  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" type="text/css" href="css/ui-lightness/jqury-ui-1.8.14.custom.css">
 
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  
-    <script type="text/javascript" src="jvCode/menuCode.js"></script>
-    <script type="text/javascript" src="jvCode/registerCode.js"></script>
-    <script type="text/javascript" src="jvCode/welcomCode.js"></script>
+    <script src="https://jqueryvalidation.org/files/lib/jquery-1.11.1.js"></script>
+ 
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/dataRegister.css" />
+    <link rel="stylesheet" type="text/css" href="css/dataLogin.css" />
+    <link rel="stylesheet" type="text/css" href="css/dataWelcome.css" />
+   
 
 </head>
 
 
 <body class="body">
     <div class="menu">
-        <a class="welcome" href="#welcome" data-option="datawelcome" onclick="changeWindow(this)"><b>Welcome</b></a>
+        <a class="welcome" href="#welcome" data-option="dataWelcome" onclick="changeWindow(this)"><b>Welcome</b></a>
         <a class="login" href="#login" data-option="dataLogin" onclick="changeWindow(this)"><b>Log in</b></a>
         <a class="signin" href="#register" data-option="dataRegister" onclick="changeWindow(this)"><b>Sign in</b></a>
         <a class="about" href="#about" onclick="changeWindow(this)"><b>About</b></a>
@@ -34,54 +29,78 @@
 
 
     <div id="mainContainer" class="main" >
-        <section id="datawelcome" >
+        <section id="dataWelcome" >
             <div class="welcomeContainer">
-                <img id="pacman_icon" style=" width: 70px; margin-top: -50px;" src ="images/pacman_icon.jpg">
-                <button type="button" class="signup-btn">Sign up</button>
+                <img id="pacman_icon" style="width: 70px; margin-top: -50px;" src ="images/pacman_icon.jpg">
+                <button type="button" class="signup-btn" onclick="moveTo('dataRegister')">Sign up</button>
                 <hr>
                 <p class="or">OR</p>
-                <button type="button" class="login-btn">Login</button>
+                <button type="button" class="login-btn" onclick="moveTo('dataLogin')">Login</button>
             </div>
         </section>
 
-        <section id="dataLogin" style="background-color:blue; display: none;">
-            <img id="image" src="images/6.jpg">
-        
-
-        </section>
-
-        <section id="dataRegister" style="display: none;">
+      
+        <section id="dataRegister" style="display: none; background-image: url(images/pacman_background.jpg);">
          
             <div class="signinContainer">
-                <form>
-                    <br>
-                    <br>
-                <label for="uName"><b>User Name</b></label>
-                <input type="text" class="input-box" placeholder="Enter UserName" name="uName" required>
-                <br>
-                <label for="psw"><b>Password</b></label>
-                <input type="password" class="input-box" placeholder="Enter Password" name="psw" required>
-                <br>
-                <label for="fName"><b>Full Name</b></label>
-                <input type="text" class="input-box" placeholder="Enter full name" name="fName" required>
-                <br>
-                <label for="email"><b>Email</b></label>
-                <input type="text" class="input-box" placeholder="Enter Email" name="email" required>
-                <form>
-	                <label for="dt"><b>BirthDate</b></label>
-	                <input name="dt" class="input-box" style="text-align: center;" type="date"/>
+                <h1><span>Sign up</span></h1>
+                <form action="#" id="registration" name="registration">
+                    <table style="width:80%; margin: 0 auto;">
+                        <tr>
+                            <th><label for="fName"><b>Full Name</b></label></th>
+                            <th><input type="text" class="input-box" placeholder="Enter full name" id="fullname" name="fullname"></th>
+                        </tr>
+                        <tr>
+                            <th><label for="uName"><b>User Name</b></label></th>
+                            <th><input type="text" class="input-box" placeholder="Enter UserName" id="username" name="username"></th>
+                        </tr>
+                        <tr>
+                            <th ><label for="psw"><b>Password</b></label></th>
+                            <th><input type="password" class="input-box" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" id="password" name="password"></th>
+                        </tr>
+                        <tr>
+                            <th ><label for="email"><b>Email</b></label></th>
+                            <th><input type="email" class="input-box" placeholder="Enter Email" id="email" name="email"></th>
+                        </tr>
+                        <tr>
+                            <th><label for="dt"><b>BirthDate</b></label></th>
+                            <th><input name="dt" class="input-box" style="text-align: center;" type="date"/></th>
+                        </tr>
+                    </table>
+                    <button type="submit" class="submit-btn">Submit</button>
                 </form>
-            <br>
-            <button type="button" class="submit-btn">Submit</button>
-                <label>
-                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-                </label>
-            </form>
+
 
             </div>
         </section>
 
-        <section id="gameSection">
+        <section id="dataLogin" style="display: none; background-image: url(images/pacman_background.jpg);">
+            
+            <div class="loginContainer">
+                <br>
+                <br>
+                <br>
+                <h1><span>Login</span></h1>
+                <form action="#" id="loginForm" name="loginForm">
+                    <table style="width:80%; margin: 0 auto;">
+                        <tr>
+                            <th style="text-align: left;"><label for="uName"><b>User Name</b></label></th>
+                            <th><input type="text" class="input-box" placeholder="Enter UserName" id="loginUserName" name="loginUserName" required></th>
+                        </tr>
+                        <tr>
+                            <th style="text-align: left;"><label for="psw"><b>Password</b></label></th>
+                            <th><input type="password" class="input-box" placeholder="Enter Password" id="loginPassword" name="loginPassword" required></th>
+                        </tr>
+                    
+                    </table>
+                    <button type="submit" class="loginB">Insert to game</button>
+                </form>
+            </div>
+
+        </section>
+        
+
+        <section id="gameSection" style="display: none; background-color: blueviolet;">
 
         </section>
 
@@ -90,14 +109,26 @@
         </section>
 
         <section id="settingSection">
-
+            
         </section>
 
     </div>
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+    <script src="https://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+
+    
+    <script type="text/javascript" src="jvCode/menuCode.js"></script>
+    <script type="text/javascript" src="jvCode/registerCode.js"></script>
+    <script type="text/javascript" src="jvCode/welcomCode.js"></script>
+    <script type="text/javascript" src="jvCode/loginCode.js"></script>
 </body>
 
 
