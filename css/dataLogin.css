@@ -1,0 +1,35 @@
+
+.loginContainer{
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.8);
+    padding: 0 0 20px;
+    text-align: center;
+    font-family: cursive;
+    color: white;
+}
+
+
+.loginB{
+    color: #ffffff;
+    background-color: cornflowerblue;
+    width: 60%;
+    padding: 10px 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: cursive;
+}
+
+tr{
+    text-align: left;
+}
+

@@ -1,4 +1,6 @@
 
+
+
 function changeWindow(id) {
     let section = document.getElementsByTagName('section');
 
@@ -8,3 +10,4 @@ function changeWindow(id) {
     
     document.getElementById(id.getAttribute("data-option")).style.display = "block"
 }
+

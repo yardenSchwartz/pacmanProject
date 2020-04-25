@@ -1,0 +1,54 @@
+
+.dataRegister{
+    background-image: url(images/pacman_background);
+    width: 100%;
+}
+
+.signinContainer{
+    width: 850px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.8);
+    padding: 0 0 20px;
+    text-align: center;
+    font-family: cursive;
+    color: white;
+}
+
+.input-box{
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 50%;
+    border: 1px solid #999;
+    outline: none;
+}
+
+.submit-btn{
+    color: #ffffff;
+    background-color: cornflowerblue;
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: cursive;
+  }
+
+  form .error {
+    color: #ff0000;
+    font-size: 14px;
+  }
+
+  tr{
+    text-align: left;
+}
+
+
