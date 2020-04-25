@@ -1,24 +1,4 @@
 
-//full name validation
-function getWordCount(wordString) {
-    var words = wordString.split(" ");
-    words = words.filter(function(words) { 
-      return words.length > 0
-    }).length;
-    return words;
-  }
-  
-  //add the custom validation method
-  jQuery.validator.addMethod("wordCount",
-     function(value, element, params) {
-        var count = getWordCount(value);
-        if(count >= params[0]) {
-           return true;
-        }
-     },
-     //jQuery.validator.format("A minimum of {0} words is required here.")
-  );
-  
 
 $().ready(function () {
 
@@ -74,8 +54,12 @@ $().ready(function () {
         //just if submitted without errors keep to create an account
         submitHandler: function(form) {
             form.submit();
-            saveUser();
-            //moveTo('dataLogin');
+            if(saveUser()==true){
+                 moveTo("gameSection");
+            }
+            else{
+                alert("This username is already exist") 
+            }
             //document.getElementById("dataRegister").style.display = "none";
             //document.getElementById("dataLogin").style.display = "block";
             //var element = document.getElementById("myDIV");
@@ -95,4 +79,5 @@ function saveUser() {
     
     let user={userName,userPassword};
     addUser(user);
+    return true;
 }
