@@ -3,7 +3,7 @@
 <head>
     
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/dateRegister.css" />
+    <link rel="stylesheet" type="text/css" href="css/dataRegister.css" />
     <link rel="stylesheet" type="text/css" href="css/dataWelcome.css" />
     <link rel="stylesheet" type="text/css" href="css/setting.css" />
     <link rel="stylesheet" type="text/css" href="css/datalogin.css" />
@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  
+    
+    <script type="text/javascript" src="jvCode/welcomCode.js"></script>
     <script type="text/javascript" src="jvCode/menuCode.js"></script>
     <script type="text/javascript" src="jvCode/registerCode.js"></script>
-    <script type="text/javascript" src="jvCode/welcomCode.js"></script>
     <script type="text/javascript" src="jvCode/setting.js"></script>
     <script type="text/javascript" src="jvCode/about.js"></script>
 
@@ -51,7 +51,7 @@
         <section id="dataWelcome" >
             <div class="welcomeContainer">
                 <img id="pacman_icon" style="width: 70px; margin-top: -50px;" src ="images/pacman_icon.jpg">
-                <button type="button" class="signup-btn" onclick="moveTo('dataRegister')">Sign up</button>
+                <button type="button" class="signup-btn" onclick="moveTo('dataRegister')">Sign in</button>
                 <hr>
                 <p class="or">OR</p>
                 <button type="button" class="login-btn" onclick="moveTo('dataLogin')">Login</button>
@@ -63,8 +63,9 @@
         <section id="dataRegister" style="display: none; background-image: url(images/pacman_background.jpg);">
          
             <div class="signinContainer">
-                <h1><span>Sign up</span></h1>
+                
                 <form action="#" id="registration" name="registration">
+                    <h1>Sign-in</h1>
                     <table style="width:80%; margin: 0 auto;">
                         <tr>
                             <th><label for="fName"><b>Full Name</b></label></th>
@@ -98,10 +99,10 @@
             
             <div class="loginContainer">
                 <br>
-                <br>
-                <br>
-                <h1><span>Login</span></h1>
+                
+               
                 <form action="#" id="loginForm" name="loginForm">
+                    <h1>Login</h1>
                     <table style="width:80%; margin: 0 auto;">
                         <tr>
                             <th style="text-align: left;"><label for="uName"><b>User Name</b></label></th>

@@ -56,3 +56,25 @@ function moveTo(id){
     document.getElementById(id).style.display = "block";
 
 }
+
+
+function functionHide(id){
+  $("section").hide();
+  $("#id").show();
+}
+
+function gamePage(){
+  $("#dataLogin").style.display = "none";
+  $("#dataRegister").style.display = "none";
+  $("#gameSection").style.display = "block";
+  $("dataWelcome").style.display = "none";
+  $("#settingSection").style.display = "none";
+}
+
+function LoginPage(){
+  $("#dataLogin").style.display = "block";
+  $("#dataRegister").style.display = "none";
+  $("#gameSection").style.display = "none";
+  $("dataWelcome").style.display = "none";
+  $("#settingSection").style.display = "none";
+}

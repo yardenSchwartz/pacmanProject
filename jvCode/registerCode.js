@@ -7,6 +7,7 @@ $().ready(function () {
             fullname: {
                 pattern: '^([a-zA-Z]+\\s)*[a-zA-Z]+$',
                 required: true,
+                checkFullName: true,
                 //wordCount: 2,
             },
             username: {
@@ -32,6 +33,7 @@ $().ready(function () {
             fullname: {
                 pattern: "Your name must be contains only letters",
                 required: "Please enter your first and last name",
+                checkFullName: "Please enter at least 2 words"
                 //wordCount: "Please enter at least 2 words"
             },
             username: {
@@ -55,7 +57,8 @@ $().ready(function () {
         submitHandler: function(form) {
             form.submit();
             if(saveUser()==true){
-                 moveTo("gameSection");
+                //functionHide('gameSection');
+                LoginPage();
             }
             else{
                 alert("This username is already exist") 
@@ -69,6 +72,10 @@ $().ready(function () {
     });
 });
 
+ /*valid full name*/
+/// jQuery.validator.addMethod("checkFullName", function (value, element) {
+ //   return /^[^0-9]+$/.test(value);
+ // }),
 
 function saveUser() {
     let userName = document.getElementById("username").value;
