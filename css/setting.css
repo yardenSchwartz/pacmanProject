@@ -4,10 +4,15 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
+.settingSection{
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
 
 .errorSetting{
     color: red;
     display: none;
+    margin:0px 0px 0px 0px ;
 }
 .mainHeadline{
     font-family: "Bungee Shade";
@@ -30,12 +35,21 @@
     border-bottom: 2px solid #000;
     margin: auto;
 }
+
+
+
 .settingConteiner{
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    padding: 0px 0px 0px 0px;
+    margin:0px auto 0px;
+    text-align: center;
     width: 50%;
     color: white;
     /* background-color: black transparent; */
     background-color: rgba(3, 1, 1, 0.9);
     font-family: "Fredoka One";
+    /* margin-top: 10%; */
+    height: 90%;
 }
 .settingLabels{
     font-family: "Nunito";
@@ -154,12 +168,14 @@ ul {padding: 0px; margin: 0;}
 
 
 .numberBig{
-    width: 40px;
+    width: 70px;
 }
 .numberSmall{
-    width: 25px;
+    width: 40px;
 }
 
 .color-picker{
     border-radius: 6px;
+    margin-right: 10px;
+
 }

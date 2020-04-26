@@ -11,3 +11,14 @@ function changeWindow(id) {
     document.getElementById(id.getAttribute("data-option")).style.display = "block"
 }
 
+
+function changeWindowById(id) {
+    let section = document.getElementsByTagName('section');
+
+    for(i=0; i<section.length; i++){
+            section[i].style.display = 'none';
+    }
+    
+    document.getElementById(id).style.display = "block"
+}
+
