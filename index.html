@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/dataRegister.css" />
     <link rel="stylesheet" type="text/css" href="css/dataWelcome.css" />
     <link rel="stylesheet" type="text/css" href="css/setting.css" />
     <link rel="stylesheet" type="text/css" href="css/datalogin.css" />
     <link rel="stylesheet" type="text/css" href="css/about.css" />
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -114,7 +111,7 @@
                         </tr>
                     
                     </table>
-                    <button type="submit" class="loginB">Insert to game</button>
+                    <button type="submit" class="loginB" >Insert to game</button>
                 </form>
             </div>
 
@@ -122,8 +119,16 @@
         
 
         <section id="gameSection" name="gameSection"style="display: none; background-color: blueviolet;">
-            <div>
-                dshjfskdshfdsjfodsjods[osfdkjdsfsdkfsdfks]sdlkjfklsdjfkldjs
+            <div id="score">
+                <label for="lblScore">SCORE:</label>
+                <input id="lblScore" type="text" />
+            </div>
+            <div id="time">
+                <label for="lblTime">TIME:</label>
+                <input id="lblTime" type="text" />
+            </div>
+            <div id="game">
+                <canvas id="canvas" height="600" width="600"></canvas>
             </div>
         </section>
 

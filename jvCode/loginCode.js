@@ -35,17 +35,19 @@ $().ready(function () {
             let userPassword = document.getElementById("loginPassword").value;
             let user={userName,userPassword};
             
-            if(containUser(user)){//succsess login
-                //move to game page
-                //moveTo("gameSection");
-                //functionHide('gameSection');
-                gamePage();
+            changeWindowById("settingSection");
+
+            // if(containUser(user)){//succsess login
+            //     //move to game page
+            //     //moveTo("gameSection");
+            //     //functionHide('gameSection');
+            //     gamePage();
 
            
-            }
-            else{
-                alert("wrong details, try again or first register")      
-            }
+            // }
+            // else{
+            //     alert("wrong details, try again or first register")      
+            // }
         }
 
     });
