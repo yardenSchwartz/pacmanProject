@@ -37,7 +37,11 @@ $().ready(function () {
             
             if(containUser(user)){//succsess login
                 //move to game page
-                moveTo("gameSection");
+                //moveTo("gameSection");
+                //functionHide('gameSection');
+                gamePage();
+
+           
             }
             else{
                 alert("wrong details, try again or first register")      
